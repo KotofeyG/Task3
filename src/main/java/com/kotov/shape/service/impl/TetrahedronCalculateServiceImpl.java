@@ -11,7 +11,7 @@ public class TetrahedronCalculateServiceImpl implements TetrahedronCalculateServ
     public static Logger logger = LogManager.getLogger();
 
     @Override
-    public double calculateVolumeOfTetrahedron(Tetrahedron tetrahedron) throws TetrahedronException {
+    public double calculateVolume(Tetrahedron tetrahedron) throws TetrahedronException {
         if (tetrahedron == null) {
             throw new TetrahedronException("Calculation of volume cannot be completed. Argument contains null");
         }
@@ -23,7 +23,7 @@ public class TetrahedronCalculateServiceImpl implements TetrahedronCalculateServ
     }
 
     @Override
-    public double calculateAreaOfTetrahedron(Tetrahedron tetrahedron) throws TetrahedronException {
+    public double calculateArea(Tetrahedron tetrahedron) throws TetrahedronException {
         if (tetrahedron == null) {
             throw new TetrahedronException("Calculation of area cannot be completed. Argument contains null");
         }
@@ -35,7 +35,7 @@ public class TetrahedronCalculateServiceImpl implements TetrahedronCalculateServ
     }
 
     @Override
-    public double calculateHeightOfTetrahedron(Tetrahedron tetrahedron) throws TetrahedronException {
+    public double calculateHeight(Tetrahedron tetrahedron) throws TetrahedronException {
         if (tetrahedron == null) {
             throw new TetrahedronException("Calculation of height cannot be completed. Argument contains null");
         }
@@ -47,7 +47,7 @@ public class TetrahedronCalculateServiceImpl implements TetrahedronCalculateServ
     }
 
     @Override
-    public double calculatePerimeterOfTetrahedron(Tetrahedron tetrahedron) throws TetrahedronException {
+    public double calculatePerimeter(Tetrahedron tetrahedron) throws TetrahedronException {
         if (tetrahedron == null) {
             throw new TetrahedronException("Calculation of perimeter cannot be completed. Argument contains null");
         }

@@ -25,15 +25,15 @@ public class TetrahedronFactory {
         Point c = new Point(coordinates.get(6), coordinates.get(7), coordinates.get(8));
         Point d = new Point(coordinates.get(9), coordinates.get(10), coordinates.get(11));
         if (!TetrahedronValidator.isTetrahedronValid(a, b, c, d)) {
-            throw new TetrahedronException("Incorrect data to create tetrahedron");
+            throw new TetrahedronException("Incorrect data for creating tetrahedron");
         }
         Tetrahedron tetrahedron = new Tetrahedron(a, b, c, d);
-        logger.log(Level.INFO, "Tetrahedron is created successfully.");
+        logger.log(Level.INFO, "Tetrahedron is created successfully: " + tetrahedron);
         return tetrahedron;
     }
 
-    public static List<Tetrahedron> createTetrahedrons(List<Double[]> parameters) throws TetrahedronException {
-        if (parameters == null || parameters.size() == 0) {
+    public static List<Tetrahedron> createListOfTetrahedrons(List<Double[]> parameters) throws TetrahedronException {
+        if (parameters == null || parameters.isEmpty()) {
             throw new TetrahedronException("Unable to create Tetrahedron object. Argument contains null or empty");
         }
         List<Tetrahedron> tetrahedrons = new ArrayList<>();
@@ -52,15 +52,15 @@ public class TetrahedronFactory {
             c = new Point(coordinates[6], coordinates[7], coordinates[8]);
             d = new Point(coordinates[9], coordinates[10], coordinates[11]);
             if (!TetrahedronValidator.isTetrahedronValid(a, b, c, d)) {
-                logger.log(Level.ERROR, "Incorrect data to create tetrahedron");
+                logger.log(Level.ERROR, "Incorrect data for creating tetrahedron");
                 continue;
             }
             tetrahedrons.add(new Tetrahedron(a, b, c, d));
         }
-        if (tetrahedrons.size() == 0) {
-            throw new TetrahedronException("There is not correct data to create tetrahedrons");
+        if (tetrahedrons.isEmpty()) {
+            throw new TetrahedronException("There is not correct data for creating tetrahedrons");
         }
-        logger.log(Level.INFO, "Tetrahedrons are created successfully");
+        logger.log(Level.INFO, "Tetrahedrons are created successfully: " + tetrahedrons);
         return tetrahedrons;
     }
 }

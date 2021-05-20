@@ -1,0 +1,1 @@
+19 мая 2021 21:57:49,113 [main] ERROR com.kotov.shape.reader.DataReader : readDataFromFile - Wrong argument. Unable to read data from C:\Users\Lenovo\IdeaProjects\Task3\target\test-classes\emptyTestFile.txt

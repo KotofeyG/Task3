@@ -1,0 +1,13 @@
+19 мая 2021 17:24:09,872 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 0.0, y = 0.0, z = 0.0 ], b = Point [ x = 1.0, y = 0.0, z = 0.0 ]
+19 мая 2021 17:24:09,880 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 1.0
+19 мая 2021 17:24:09,888 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 0.0, y = 0.0, z = 0.0 ], b = Point [ x = 0.5, y = 0.8660254037844386, z = 0.0 ]
+19 мая 2021 17:24:09,888 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 0.9999999999999999
+19 мая 2021 17:24:09,894 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 0.0, y = 0.0, z = 0.0 ], b = Point [ x = 0.5, y = 0.2886751345948129, z = 0.816496580927726 ]
+19 мая 2021 17:24:09,894 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 1.0
+19 мая 2021 17:24:09,894 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 1.0, y = 0.0, z = 0.0 ], b = Point [ x = 0.5, y = 0.8660254037844386, z = 0.0 ]
+19 мая 2021 17:24:09,894 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 0.9999999999999999
+19 мая 2021 17:24:09,894 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 1.0, y = 0.0, z = 0.0 ], b = Point [ x = 0.5, y = 0.2886751345948129, z = 0.816496580927726 ]
+19 мая 2021 17:24:09,894 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 1.0
+19 мая 2021 17:24:09,894 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 0.5, y = 0.8660254037844386, z = 0.0 ], b = Point [ x = 0.5, y = 0.2886751345948129, z = 0.816496580927726 ]
+19 мая 2021 17:24:09,894 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 1.0
+19 мая 2021 17:24:09,894 [main] INFO  com.kotov.shape.validator.TetrahedronValidator : isTetrahedronValid - Result is true

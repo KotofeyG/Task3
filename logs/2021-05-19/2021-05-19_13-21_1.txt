@@ -1,0 +1,12 @@
+19 мая 2021 13:21:43,541 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 0.0, y = 0.0, z = 0.0 ], b = Point [ x = 1.0, y = 0.0, z = 0.0 ]
+19 мая 2021 13:21:43,563 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 1.0
+19 мая 2021 13:21:43,564 [main] INFO  com.kotov.shape.service.impl.TetrahedronCalculateServiceImpl : calculateAreaOfTetrahedron - Calculation of area is successful. Result is 1.7320508075688772
+19 мая 2021 13:21:43,571 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 0.0, y = 0.0, z = 0.0 ], b = Point [ x = 1.0, y = 0.0, z = 0.0 ]
+19 мая 2021 13:21:43,584 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 1.0
+19 мая 2021 13:21:43,586 [main] INFO  com.kotov.shape.service.impl.TetrahedronCalculateServiceImpl : calculateHeightOfTetrahedron - Calculation of height is successful. Result is 0.816496580927726
+19 мая 2021 13:21:43,586 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 0.0, y = 0.0, z = 0.0 ], b = Point [ x = 1.0, y = 0.0, z = 0.0 ]
+19 мая 2021 13:21:43,586 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 1.0
+19 мая 2021 13:21:43,591 [main] INFO  com.kotov.shape.service.impl.TetrahedronCalculateServiceImpl : calculatePerimeterOfTetrahedron - Calculation of perimeter is successful. Result is 6.0
+19 мая 2021 13:21:43,591 [main] DEBUG com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - a = Point [ x = 0.0, y = 0.0, z = 0.0 ], b = Point [ x = 1.0, y = 0.0, z = 0.0 ]
+19 мая 2021 13:21:43,591 [main] INFO  com.kotov.shape.service.impl.PointCalculationServiceImpl : calculateLengthBetweenPoints - Calculation of length between two points is successful. Result is 1.0
+19 мая 2021 13:21:43,591 [main] INFO  com.kotov.shape.service.impl.TetrahedronCalculateServiceImpl : calculateVolumeOfTetrahedron - Calculation of volume is successful. Result is 0.11785113019775793

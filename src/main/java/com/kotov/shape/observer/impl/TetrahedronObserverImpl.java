@@ -2,7 +2,7 @@ package com.kotov.shape.observer.impl;
 
 import com.kotov.shape.entity.Tetrahedron;
 import com.kotov.shape.entity.TetrahedronParameter;
-import com.kotov.shape.entity.Warehouse;
+import com.kotov.shape.entity.TetrahedronWarehouse;
 import com.kotov.shape.exception.TetrahedronException;
 import com.kotov.shape.observer.TetrahedronObserver;
 import com.kotov.shape.observer.TetrahedronEvent;
@@ -17,15 +17,15 @@ public class TetrahedronObserverImpl implements TetrahedronObserver {
     @Override
     public void parametersChanged(TetrahedronEvent event) {
         var service = new TetrahedronCalculateServiceImpl();
-        Warehouse warehouse = Warehouse.getInstance();
+        TetrahedronWarehouse warehouse = TetrahedronWarehouse.getInstance();
         Tetrahedron tetrahedron = event.getSource();
         try {
-            double volume = service.calculateVolumeOfTetrahedron(tetrahedron);
-            double area = service.calculateAreaOfTetrahedron(tetrahedron);
-            double height = service.calculateHeightOfTetrahedron(tetrahedron);
-            double perimeter = service.calculatePerimeterOfTetrahedron(tetrahedron);
+            double volume = service.calculateVolume(tetrahedron);
+            double area = service.calculateArea(tetrahedron);
+            double height = service.calculateHeight(tetrahedron);
+            double perimeter = service.calculatePerimeter(tetrahedron);
             var parameter = new TetrahedronParameter(volume, area, height, perimeter);
-            warehouse.put(tetrahedron.getTetrahedronId(), parameter);
+            warehouse.putParameter(tetrahedron.getTetrahedronId(), parameter);
             logger.log(Level.INFO, "Parameters for tetrahedron is updated: id = "
                     + tetrahedron.getTetrahedronId() + ", volume = " + volume + ", area = " + area
                     + ", height = " + height + ", perimeter = " + perimeter);

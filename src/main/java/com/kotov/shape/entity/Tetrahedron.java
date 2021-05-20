@@ -18,9 +18,6 @@ public class Tetrahedron implements TetrahedronObservable {
         tetrahedronId = ShapeIdGeneration.generateId();
     }
 
-    public Tetrahedron() {
-    }
-
     public Tetrahedron(Point a, Point b, Point c, Point d) throws TetrahedronException {
         if (a == null || b == null || c == null || d == null) {
             throw new TetrahedronException("Unable to create Tetrahedron object. Argument(s) contains null");
@@ -33,7 +30,7 @@ public class Tetrahedron implements TetrahedronObservable {
 
     public void setA(Point a) throws TetrahedronException {
         if (a == null) {
-            throw new TetrahedronException("Unable to change point in Tetrahedron object. Argument contains null");
+            throw new TetrahedronException("Unable to change Point a in Tetrahedron object. Argument contains null");
         }
         this.a = a;
         notifyObserver();
@@ -41,7 +38,7 @@ public class Tetrahedron implements TetrahedronObservable {
 
     public void setB(Point b) throws TetrahedronException {
         if (b == null) {
-            throw new TetrahedronException("Unable to change point in Tetrahedron object. Argument contains null");
+            throw new TetrahedronException("Unable to change Point b in Tetrahedron object. Argument contains null");
         }
         this.b = b;
         notifyObserver();
@@ -49,7 +46,7 @@ public class Tetrahedron implements TetrahedronObservable {
 
     public void setC(Point c) throws TetrahedronException {
         if (c == null) {
-            throw new TetrahedronException("Unable to change point in Tetrahedron object. Argument contains null");
+            throw new TetrahedronException("Unable to change Point c in Tetrahedron object. Argument contains null");
         }
         this.c = c;
         notifyObserver();
@@ -57,7 +54,7 @@ public class Tetrahedron implements TetrahedronObservable {
 
     public void setD(Point d) throws TetrahedronException {
         if (d == null) {
-            throw new TetrahedronException("Unable to change point in Tetrahedron object. Argument contains null");
+            throw new TetrahedronException("Unable to change Point d in Tetrahedron object. Argument contains null");
         }
         this.d = d;
         notifyObserver();

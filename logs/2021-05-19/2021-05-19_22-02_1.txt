@@ -1,0 +1,1 @@
+19 мая 2021 22:02:13,571 [main] INFO  com.kotov.shape.parser.TetrahedronParser : parseTetrahedronParameters - Tetrahedron parameters are parsed successfully: [0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.5, 0.866025, 0.0, 0.5, 0.288675, 0.816496]

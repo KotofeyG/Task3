@@ -21,7 +21,7 @@ public class FileValidator {
                     result = true;
                 }
             } catch (IOException e) {
-                logger.log(Level.WARN, "Error reading file " + pathToFile);
+                logger.log(Level.WARN, pathToFile + " is invalid");
             }
         }
         return result;

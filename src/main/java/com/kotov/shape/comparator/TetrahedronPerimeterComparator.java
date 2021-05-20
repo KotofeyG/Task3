@@ -2,7 +2,7 @@ package com.kotov.shape.comparator;
 
 import com.kotov.shape.entity.Tetrahedron;
 import com.kotov.shape.entity.TetrahedronParameter;
-import com.kotov.shape.entity.Warehouse;
+import com.kotov.shape.entity.TetrahedronWarehouse;
 import com.kotov.shape.exception.TetrahedronException;
 import com.kotov.shape.service.impl.TetrahedronCalculateServiceImpl;
 import org.apache.logging.log4j.Level;
@@ -20,9 +20,9 @@ public class TetrahedronPerimeterComparator implements Comparator<Tetrahedron> {
         int result = 0;
         double perimeter1 = 0;
         double perimeter2 = 0;
-        Warehouse warehouse = Warehouse.getInstance();
-        Optional<TetrahedronParameter> optional1 = warehouse.get(o1.getTetrahedronId());
-        Optional<TetrahedronParameter> optional2 = warehouse.get(o2.getTetrahedronId());
+        TetrahedronWarehouse warehouse = TetrahedronWarehouse.getInstance();
+        Optional<TetrahedronParameter> optional1 = warehouse.getParameter(o1.getTetrahedronId());
+        Optional<TetrahedronParameter> optional2 = warehouse.getParameter(o2.getTetrahedronId());
 
         if (optional1.isPresent()) {
             TetrahedronParameter parameter1 = optional1.get();
@@ -30,7 +30,7 @@ public class TetrahedronPerimeterComparator implements Comparator<Tetrahedron> {
         } else {
             var service = new TetrahedronCalculateServiceImpl();
             try {
-                perimeter1 = service.calculatePerimeterOfTetrahedron(o1);
+                perimeter1 = service.calculatePerimeter(o1);
             } catch (TetrahedronException e) {
                 logger.log(Level.ERROR, "Calculation error: ", e);
                 return -1;
@@ -42,7 +42,7 @@ public class TetrahedronPerimeterComparator implements Comparator<Tetrahedron> {
         } else {
             var service = new TetrahedronCalculateServiceImpl();
             try {
-                perimeter2 = service.calculatePerimeterOfTetrahedron(o2);
+                perimeter2 = service.calculatePerimeter(o2);
             } catch (TetrahedronException e) {
                 logger.log(Level.ERROR, "Calculation error: ", e);
                 return 1;

@@ -1,0 +1,2 @@
+19 мая 2021 14:31:15,814 [main] DEBUG com.kotov.shape.service.impl.TetrahedronLocationServiceImpl : isBaseOnCoordinateLineXY - Tetrahedron [ pyramidID = 1, a = Point [ x = 0.0, y = 0.0, z = 0.0 ], b = Point [ x = 1.0, y = 0.0, z = 0.0 ], c = Point [ x = 0.5, y = 0.86602, z = 0.0 ], d = Point [ x = 0.5, y = 0.28867, z = 0.81649 ] ]
+19 мая 2021 14:31:15,824 [main] INFO  com.kotov.shape.service.impl.TetrahedronLocationServiceImpl : isBaseOnCoordinateLineXY - Result is true

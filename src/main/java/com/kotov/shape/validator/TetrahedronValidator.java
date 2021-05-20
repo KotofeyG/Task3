@@ -14,7 +14,7 @@ public class TetrahedronValidator {
     private static final String NUMBER = "-?\\d+\\.?\\d*?";
 
     public static boolean areParametersValid(String[] data) {
-        if (data.length != NUMBER_OF_PARAMETERS) {
+        if (data == null || data.length != NUMBER_OF_PARAMETERS) {
             return false;
         }
         boolean result = true;
@@ -31,6 +31,9 @@ public class TetrahedronValidator {
 
     public static boolean isTetrahedronValid(Point a, Point b, Point c, Point d) {
         boolean result = false;
+        if (a == null && b == null && c == null && d == null) {
+            return result;
+        }
         var service = new PointCalculationServiceImpl();
         try {
             double edgeAB = service.calculateLengthBetweenPoints(a, b);
@@ -41,25 +44,25 @@ public class TetrahedronValidator {
             double edgeCD = service.calculateLengthBetweenPoints(c, d);
 
             if (a.getX() == b.getX() && b.getX() == c.getX() && a.getX() != d.getX()) {
-                if (isAlmostEquals(edgeAB, edgeAC) && isAlmostEquals(edgeAB, edgeAD)
-                        && isAlmostEquals(edgeAB, edgeBC) && isAlmostEquals(edgeAB, edgeBD)
-                        && isAlmostEquals(edgeAB, edgeCD)) {
+                if (isEdgesAlmostEquals(edgeAB, edgeAC) && isEdgesAlmostEquals(edgeAB, edgeAD)
+                        && isEdgesAlmostEquals(edgeAB, edgeBC) && isEdgesAlmostEquals(edgeAB, edgeBD)
+                        && isEdgesAlmostEquals(edgeAB, edgeCD)) {
                     result = true;
                 }
             }
 
             if (a.getY() == b.getY() && b.getY() == c.getY() && a.getY() != d.getY()) {
-                if (isAlmostEquals(edgeAB, edgeAC) && isAlmostEquals(edgeAB, edgeAD)
-                        && isAlmostEquals(edgeAB, edgeBC) && isAlmostEquals(edgeAB, edgeBD)
-                        && isAlmostEquals(edgeAB, edgeCD)) {
+                if (isEdgesAlmostEquals(edgeAB, edgeAC) && isEdgesAlmostEquals(edgeAB, edgeAD)
+                        && isEdgesAlmostEquals(edgeAB, edgeBC) && isEdgesAlmostEquals(edgeAB, edgeBD)
+                        && isEdgesAlmostEquals(edgeAB, edgeCD)) {
                     result = true;
                 }
             }
 
             if (a.getZ() == b.getZ() && b.getZ() == c.getZ() && a.getZ() != d.getZ()) {
-                if (isAlmostEquals(edgeAB, edgeAC) && isAlmostEquals(edgeAB, edgeAD)
-                        && isAlmostEquals(edgeAB, edgeBC) && isAlmostEquals(edgeAB, edgeBD)
-                        && isAlmostEquals(edgeAB, edgeCD)) {
+                if (isEdgesAlmostEquals(edgeAB, edgeAC) && isEdgesAlmostEquals(edgeAB, edgeAD)
+                        && isEdgesAlmostEquals(edgeAB, edgeBC) && isEdgesAlmostEquals(edgeAB, edgeBD)
+                        && isEdgesAlmostEquals(edgeAB, edgeCD)) {
                     result = true;
                 }
             }
@@ -70,7 +73,7 @@ public class TetrahedronValidator {
         return result;
     }
 
-    private static boolean isAlmostEquals(double a, double b) {
+    private static boolean isEdgesAlmostEquals(double a, double b) {
         boolean result = false;
         double diff = Math.abs(a - b);
         if (diff <= ALLOWABLE_ERROR) {

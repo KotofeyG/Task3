@@ -2,7 +2,7 @@ package com.kotov.shape.comparator;
 
 import com.kotov.shape.entity.Tetrahedron;
 import com.kotov.shape.entity.TetrahedronParameter;
-import com.kotov.shape.entity.Warehouse;
+import com.kotov.shape.entity.TetrahedronWarehouse;
 import com.kotov.shape.exception.TetrahedronException;
 import com.kotov.shape.service.impl.TetrahedronCalculateServiceImpl;
 import org.apache.logging.log4j.Level;
@@ -20,9 +20,9 @@ public class TetrahedronHeightComparator implements Comparator<Tetrahedron> {
         int result = 0;
         double height1 = 0;
         double height2 = 0;
-        Warehouse warehouse = Warehouse.getInstance();
-        Optional<TetrahedronParameter> optional1 = warehouse.get(o1.getTetrahedronId());
-        Optional<TetrahedronParameter> optional2 = warehouse.get(o2.getTetrahedronId());
+        TetrahedronWarehouse warehouse = TetrahedronWarehouse.getInstance();
+        Optional<TetrahedronParameter> optional1 = warehouse.getParameter(o1.getTetrahedronId());
+        Optional<TetrahedronParameter> optional2 = warehouse.getParameter(o2.getTetrahedronId());
 
         if (optional1.isPresent()) {
             TetrahedronParameter parameter1 = optional1.get();
@@ -30,7 +30,7 @@ public class TetrahedronHeightComparator implements Comparator<Tetrahedron> {
         } else {
             var service = new TetrahedronCalculateServiceImpl();
             try {
-                height1 = service.calculateHeightOfTetrahedron(o1);
+                height1 = service.calculateHeight(o1);
             } catch (TetrahedronException e) {
                 logger.log(Level.ERROR, "Calculation error: ", e);
                 return -1;
@@ -42,7 +42,7 @@ public class TetrahedronHeightComparator implements Comparator<Tetrahedron> {
         } else {
             var service = new TetrahedronCalculateServiceImpl();
             try {
-                height2 = service.calculateHeightOfTetrahedron(o2);
+                height2 = service.calculateHeight(o2);
             } catch (TetrahedronException e) {
                 logger.log(Level.ERROR, "Calculation error: ", e);
                 return 1;

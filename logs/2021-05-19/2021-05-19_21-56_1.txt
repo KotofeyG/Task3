@@ -1,0 +1,1 @@
+19 мая 2021 21:56:41,671 [main] ERROR com.kotov.shape.reader.DataReader : readDataFromFile - Wrong argument. Unable to read data from null

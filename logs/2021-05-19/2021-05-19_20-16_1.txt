@@ -1,0 +1,1 @@
+19 мая 2021 20:16:03,094 [main] ERROR com.kotov.shape.parser.TetrahedronParser : parseTetrahedronsParameters - Unable to parse parameters. Argument contains invalid data: [5 66 5 2 3 2.54]
